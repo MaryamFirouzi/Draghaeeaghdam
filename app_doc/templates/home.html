@@ -1,0 +1,318 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}صفحه اصلی دکتر آقائی اقدم{% endblock title %}
+{% block content %}
+<section class="container-fluid mt-2">
+    <div class="row">
+        <aside class="col-lg-3 order-lg-0 order-1">
+             
+            <div class="card">
+                <div class="card-body  bg-118 text-white rounded ">
+                    <div class="row">
+
+                        <div id="timework" class="col-lg-12 " style="height: 380px;">
+
+                            <h6 class="IRANSans-Bold">
+                                <img src="{% static 'Images/svg/calendar.png' %}">&nbsp;&nbsp;سـاعات کاری :
+                            </h6>
+                            <hr>
+                            <p>روزهای زوج : 4 بعداز ظهر - 8 شب</p>
+                            <p>سه شنبه  : 11 صبح - 2 بعداز ظهر</p>
+                            <!--<p>پنج شنبه ها : 10 صبح - 7 عصر</p>
+                            <p>جمعه ها : بستـه</p><hr>-->
+                            <div id="Dr_address">
+                                <h6 class="IRANSans-Bold"><img src="{% static 'Images/location.png' %}">&nbsp;آدرس :</h6>
+                                <p>{{clinic.address|safe}}</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+              
+        </aside>
+        <div class="col-lg-9  order-lg-1 order-0">
+            <div id="demo" class="carousel slide mb-2" data-ride="carousel">
+                <ul class="carousel-indicators">
+                    <li data-target="#demo" data-slide-to="0" class="active"></li>
+                    {% for slide in slider_img %}
+                    <li data-target="#demo" data-slide-to="{{slide.count}}" class=""></li>
+                    {% endfor %}
+                </ul>
+                {% for topslide in top_slider_img %}
+                <div class="carousel-inner" style="height: 415px;">
+                    <div class="carousel-item active">
+                        <img src="{{topslide.top_slider_img.url}}" class="img-fluid rounded" alt="top-img" >
+                        <div class="carousel-caption">
+                            <p class="bg_caption rounded px-3 py-1">{{topslide.description}}   </p>
+                        </div>
+                    </div>
+                    {% for slide in slider_img %}
+                    <div class="carousel-item">
+                        <img src="{{slide.slider_img.url}}" class="img-fluid rounded" alt="slider">
+                        <div class="carousel-caption">
+                            <p class="bg_caption rounded p-1">{{slide.description}}</p>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>{% endfor %}
+                <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </a>
+                <a class="carousel-control-next" href="#demo" data-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </a>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="row">
+        <div class="col-lg-12">
+            <div id="medical_box" class="container-fluid mt-3 height150">
+                <div class="row">
+                    <div id="rtcol" class="col-lg-3 col-md-12 order-lg-0 order-3">
+                        <div class="card">
+
+                            <div class="card-body b-top text-center">
+                                <div class="d-flex flex-row justify-content-center">
+                                    <!--<img src="{% static 'Images/Svg/004-check-up.svg' %}" class="ml-3 svg_size">-->
+                                    <p class="text-right">بیـمار گرامی جهت رفاه حال شما و عدم اتلاف وقت در کلینیک ، لطفا از لینک زیر اینترنتی نوبت دریافت نمایید  . </p>
+                                </div>
+                                <div>
+                                    <a class="Appoin btn-grad28 m-1 animated flash" href="{% url 'nobat' %}">
+                                        <i class="fa fa-user-md fa-3x"></i>&nbsp;&nbsp;نوبت دهی 
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="proficiency" class="col-lg-5 col-md-7 order-lg-1 order-1 ">
+                        <div class="card">
+                          <!--  <div class="card-header bg-118 text-white">
+                                <h5 class="IRANSans-Bold">خدمات ما</h5>
+                            </div>
+                            
+                            <div class="card-body">
+                                <div id="owl-Services" class="owl-carousel owl-ltr text-center owl-loaded owl-drag">
+                                    
+                               
+                                    
+                                <div class="owl-stage-outer"><div class="owl-stage" style="transform: translate3d(-1221px, 0px, 0px); transition: all 1s ease 0s; width: 1935px;"><div class="owl-item cloned" style="width: 101.8px;"><div class="item">
+                                        <a href="Content.html">
+
+                                            <img src="{% static 'Images/Svg/027-hypersensitive.svg' %}" class="img-fluid"><br>
+                                            <p>ترمیمی</p>
+                                        </a>
+                                    </div></div><div class="owl-item cloned" style="width: 101.8px;"><div class="item">
+                                        <a href="Content.html">
+
+                                            <img src="{% static 'Images/Svg/009-dentist-chair.svg' %}" class="img-fluid"><br>
+                                            <p>جـراحی</p>
+                                        </a>
+                                    </div></div><div class="owl-item cloned" style="width: 101.8px;"><div class="item">
+                                        <a href="Content.html">
+
+                                            <img src="{% static 'Images/Svg/016-extraction.svg' %}" class="img-fluid"><br>
+                                            <p>درمان ریشه</p>
+                                        </a>
+                                    </div></div><div class="owl-item cloned" style="width: 101.8px;"><div class="item">
+                                        <a href="Content.html">
+
+                                            <img src="{% static 'Images/Svg/019-injection.svg' %}" class="img-fluid"><br>
+                                            <p>بیماری های لثه</p>
+                                        </a>
+                                    </div></div><div class="owl-item cloned" style="width: 101.8px;"><div class="item">
+                                        <a href="Content.html">
+
+                                            <img src="{% static 'Images/Svg/017-gun.svg' %}" class="img-fluid"><br>
+                                            <p>پروتز</p>
+                                        </a>
+                                    </div></div><div class="owl-item" style="width: 101.8px;"><div class="item">
+                                        <a href="Content.html">
+
+                                            <img src="{% static 'Images/Svg/012-dental-floss.svg' %}" class="img-fluid svg_size"><br>
+                                            <p>ارتودنسی</p>
+                                        </a>
+                                    </div></div><div class="owl-item" style="width: 101.8px;"><div class="item">
+                                        <a href="Content.html">
+
+                                            <img src="{% static 'Images/Svg/029-tooth-whitening.svg' %}" class="img-fluid svg_size"><br>
+                                            <p>زیبایی</p>
+                                        </a>
+                                    </div></div><div class="owl-item" style="width: 101.8px;"><div class="item">
+                                        <a href="Content.html">
+
+                                            <img src="{% static 'Images/Svg/018-dental-implant.svg' %}" class="img-fluid svg_size"><br>
+                                            <p>ایمپلنت</p>
+                                        </a>
+                                    </div></div><div class="owl-item" style="width: 101.8px;"><div class="item">
+                                        <a href="Content.html">
+
+                                            <img src="{% static 'Images/Svg/020-mouthwash.svg' %}" class="img-fluid"><br>
+                                            <p>اطفال</p>
+                                        </a>
+                                    </div></div><div class="owl-item" style="width: 101.8px;"><div class="item">
+                                        <a href="Content.html">
+
+                                            <img src="Images/Svg/027-hypersensitive.svg" class="img-fluid"><br>
+                                            <p>ترمیمی</p>
+                                        </a>
+                                    </div></div><div class="owl-item" style="width: 101.8px;"><div class="item">
+                                        <a href="Content.html">
+
+                                            <img src="{% static 'Images/Svg/009-dentist-chair.svg' %}" class="img-fluid"><br>
+                                            <p>جـراحی</p>
+                                        </a>
+                                    </div></div><div class="owl-item" style="width: 101.8px;"><div class="item">
+                                        <a href="Content.html">
+
+                                            <img src="{% static 'Images/Svg/016-extraction.svg' %}" class="img-fluid"><br>
+                                            <p>درمان ریشه</p>
+                                        </a>
+                                    </div></div><div class="owl-item active" style="width: 101.8px;"><div class="item">
+                                        <a href="Content.html">
+
+                                            <img src="{% static 'Images/Svg/019-injection.svg' %}" class="img-fluid"><br>
+                                            <p>بیماری های لثه</p>
+                                        </a>
+                                    </div></div><div class="owl-item active" style="width: 101.8px;"><div class="item">
+                                        <a href="Content.html">
+
+                                            <img src="{% static 'Images/Svg/017-gun.svg' %}" class="img-fluid"><br>
+                                            <p>پروتز</p>
+                                        </a>
+                                    </div></div><div class="owl-item cloned active" style="width: 101.8px;"><div class="item">
+                                        <a href="Content.html">
+
+                                            <img src="{% static 'Images/Svg/012-dental-floss.svg' %}" class="img-fluid svg_size"><br>
+                                            <p>ارتودنسی</p>
+                                        </a>
+                                    </div></div><div class="owl-item cloned active" style="width: 101.8px;"><div class="item">
+                                        <a href="Content.html">
+
+                                            <img src="Images/Svg/029-tooth-whitening.svg" class="img-fluid svg_size"><br>
+                                            <p>زیبایی</p>
+                                        </a>
+                                    </div></div><div class="owl-item cloned active" style="width: 101.8px;"><div class="item">
+                                        <a href="Content.html">
+
+                                            <img src="{% static 'Images/Svg/018-dental-implant.svg' %}" class="img-fluid svg_size"><br>
+                                            <p>ایمپلنت</p>
+                                        </a>
+                                    </div></div><div class="owl-item cloned" style="width: 101.8px;"><div class="item">
+                                        <a href="Content.html">
+
+                                            <img src="{% static 'Images/Svg/020-mouthwash.svg' %}" class="img-fluid"><br>
+                                            <p>اطفال</p>
+                                        </a>
+                                    </div></div><div class="owl-item cloned" style="width: 101.8px;"><div class="item">
+                                        <a href="Content.html">
+
+                                            <img src="{% static 'Images/Svg/027-hypersensitive.svg' %}" class="img-fluid"><br>
+                                            <p>ترمیمی</p>
+                                        </a>
+                                    </div></div></div></div><div class="owl-nav"><div class="owl-prev">&lt;</div><div class="owl-next">&gt;</div></div><div class="owl-dots"><div class="owl-dot"><span></span></div><div class="owl-dot active"><span></span></div></div></div>
+
+                            </div>-->
+                        </div>
+
+                    </div>
+                    <!--<div id="HealthCenters" class="col-lg-4 col-md-5 order-lg-2 order-2">
+                        <div class="card">
+                            <div class="card-header bg-118 text-white">
+                                <h5 class="IRANSans-Bold">دلایل انتخاب ما</h5>
+                            </div>
+                            
+                            <div class="card-body">
+                                <div id="owl-Popular" class="owl-carousel owl-ltr text-center owl-loaded owl-drag">
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                <div class="owl-stage-outer"><div class="owl-stage" style="transform: translate3d(-796px, 0px, 0px); transition: all 1s ease 0s; width: 1593px;"><div class="owl-item cloned" style="width: 132.667px;"><div class="item">
+                                        <a href="Content.html">
+
+                                            <img src="{% static 'Images/Svg/018-money.svg' %}" class="img-fluid"><br>
+                                            <p>هزینه مناسب</p>
+                                        </a>
+                                    </div></div><div class="owl-item cloned" style="width: 132.667px;"><div class="item">
+                                        <a href="Content.html">
+
+                                            <img src="{% static 'Images/Svg/029-volunteer.svg' %}" class="img-fluid"><br>
+                                            <p>رضایت بیماران</p>
+                                        </a>
+                                    </div></div><div class="owl-item cloned" style="width: 132.667px;"><div class="item">
+                                        <a href="Content.html">
+
+                                            <img src="{% static 'Images/Svg/029-time.svg' %}" class="img-fluid"><br>
+                                            <p>صرفه جویی</p>
+                                        </a>
+                                    </div></div><div class="owl-item" style="width: 132.667px;"><div class="item">
+                                        <a href="Content.html">
+
+                                            <img src="{% static 'Images/Svg/021-painkiller.svg' %}" class="img-fluid"><br>
+                                            <p>درمان راحت</p>
+                                        </a>
+                                    </div></div><div class="owl-item" style="width: 132.667px;"><div class="item">
+                                        <a href="Content.html">
+
+                                            <img src="{% static 'Images/Svg/007-dental-insurance.svg' %}" class="img-fluid"><br>
+                                            <p>تکنولوژی مدرن</p>
+                                        </a>
+                                    </div></div><div class="owl-item" style="width: 132.667px;"><div class="item">
+                                        <a href="Content.html">
+
+                                            <img src="{% static 'Images/Svg/013-health-insurance.svg' %}" class="img-fluid"><br>
+                                            <p>نیروی متخصص</p>
+                                        </a>
+                                    </div></div><div class="owl-item active" style="width: 132.667px;"><div class="item">
+                                        <a href="Content.html">
+
+                                            <img src="Images/Svg/018-money.svg" class="img-fluid"><br>
+                                            <p>هزینه مناسب</p>
+                                        </a>
+                                    </div></div><div class="owl-item active" style="width: 132.667px;"><div class="item">
+                                        <a href="Content.html">
+
+                                            <img src="{% static 'Images/Svg/029-volunteer.svg' %}" class="img-fluid"><br>
+                                            <p>رضایت بیماران</p>
+                                        </a>
+                                    </div></div><div class="owl-item active" style="width: 132.667px;"><div class="item">
+                                        <a href="Content.html">
+
+                                            <img src="{% static 'Images/Svg/029-time.svg' %}" class="img-fluid"><br>
+                                            <p>صرفه جویی</p>
+                                        </a>
+                                    </div></div><div class="owl-item cloned" style="width: 132.667px;"><div class="item">
+                                        <a href="Content.html">
+
+                                            <img src="{% static 'Images/Svg/021-painkiller.svg' %}" class="img-fluid"><br>
+                                            <p>درمان راحت</p>
+                                        </a>
+                                    </div></div><div class="owl-item cloned" style="width: 132.667px;"><div class="item">
+                                        <a href="Content.html">
+
+                                            <img src="{% static 'Images/Svg/007-dental-insurance.svg' %}" class="img-fluid"><br>
+                                            <p>تکنولوژی مدرن</p>
+                                        </a>
+                                    </div></div><div class="owl-item cloned" style="width: 132.667px;"><div class="item">
+                                        <a href="Content.html">
+
+                                            <img src="{% static 'Images/Svg/013-health-insurance.svg' %}" class="img-fluid"><br>
+                                            <p>نیروی متخصص</p>
+                                        </a>
+                                    </div></div></div></div><div class="owl-nav"><div class="owl-prev">&lt;</div><div class="owl-next">&gt;</div></div><div class="owl-dots"><div class="owl-dot"><span></span></div><div class="owl-dot active"><span></span></div></div></div>
+                            </div>-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock content %}>

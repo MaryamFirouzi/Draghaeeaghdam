@@ -1,0 +1,136 @@
+{% extends 'base.html' %}
+{% load static %}
+<title>{% block title %}گالری تصاویر{% endblock title %}</title>
+{% block content %}
+<body>
+
+
+    <section class="bglight-118 custom-shadow" style="height: 120px">
+        <div class="container-fluid"></div>
+    </section>
+
+
+
+    <section class="container p-2 card card-shadow content card card-shadow mt-2">
+        <div class="p-2 text-center">
+            <a href="Index.html"><img src="Images/logo.png" class="img-fluid" /></a>
+        </div>
+        <div class="card-body p-md-2">
+            <div id="Gallery_Slider" class="slider-pro">
+                <div class="sp-slides">
+
+                    <div class="sp-slide">
+                        <img class="sp-image" src="Images/blank.gif"
+                             data-src="{% static 'Images/Gallery/8.jpg' %}" />
+
+                        <p class="sp-layer sp-white sp-padding"
+                           data-vertical="5%" data-horizontal="5%" data-width="90%"
+                           data-show-transition="down" data-show-delay="400">
+                            فضایی دلپذیر با بروز ترین امکانات
+                        </p>
+
+                    </div>
+
+
+                    <div class="sp-slide">
+                        <img class="sp-image" src="Images/blank.gif"
+                             data-src="{% static 'Images/Gallery/2.jpg' %}" />
+
+                        <p class="sp-layer sp-white sp-padding"
+                           data-horizontal="40" data-vertical="40"
+                           data-show-transition="left">
+                            20 سال تجـربه
+                        </p>
+                    </div>
+
+                    <div class="sp-slide">
+                        <img class="sp-image" src="Images/blank.gif"
+                             data-src="{% static 'Images/Gallery/3.jpg' %}" />
+
+                        <p class="sp-layer sp-white sp-padding"
+                           data-position="centerCenter" data-vertical="-50"
+                           data-show-transition="right" data-show-delay="500">
+                            کاشت ونیر با مرغوب ترین مواد اولیه
+                        </p>
+                    </div>
+
+                    <div class="sp-slide">
+                        <img class="sp-image" src="Images/blank.gif"
+                             data-src="{% static 'Images/Gallery/4.jpg' %}" />
+
+                        <p class="sp-layer sp-white sp-padding"
+                           data-position="bottomLeft" data-vertical="0" data-width="100%"
+                           data-show-transition="up">
+                            ایمپلنت
+                        </p>
+                    </div>
+
+                    <div class="sp-slide">
+                        <img class="sp-image" src="Images/blank.gif"
+                             data-src="{% static 'Images/Gallery/5.jpg' %}" />
+
+                        <p class="sp-layer sp-white sp-padding"
+                           data-vertical="5%" data-horizontal="5%" data-width="90%"
+                           data-show-transition="down" data-show-delay="400">
+                            رضایت مشتریان
+                        </p>
+                    </div>
+
+                    <div class="sp-slide">
+                        <img class="sp-image" src="Images/blank.gif"
+                             data-src="{% static 'Images/Gallery/6.jpg' %}" />
+
+                        <p class="sp-layer sp-white sp-padding"
+                           data-horizontal="10" data-vertical="10" data-width="300">
+                            مجهزترین مرکز دندانپزشکی اطفال
+                        </p>
+                    </div>
+                    <div class="sp-slide">
+                        <img class="sp-image" src="Images/blank.gif"
+                             data-src="{% static 'Images/Gallery/1.jpg' %}" />
+
+                        <p class="sp-layer sp-white sp-padding"
+                           data-position="centerCenter" data-vertical="-50"
+                           data-show-transition="right" data-show-delay="500">
+                            بهترین مـرکز اصلاح طرح لبخند
+                        </p>
+
+                    </div>
+
+                    <div class="sp-slide">
+                        <img class="sp-image" src="Images/blank.gif"
+                             data-src="{% static 'Images/Gallery/9.jpg' %}" />
+
+                        <p class="sp-layer sp-white sp-padding"
+                           data-horizontal="50" data-vertical="100"
+                           data-show-transition="up" data-show-delay="500">
+                            زیبایی لبخند را در اینجا احساس کنید
+                        </p>
+                    </div>
+
+                    <div class="sp-slide">
+                        <img class="sp-image" src="Images/blank.gif"
+                             data-src="{% static 'Images/Gallery/10.jpg' %}" />
+                        <p class="sp-layer sp-white sp-padding"
+                           data-position="bottomLeft" data-horizontal="5%" data-vertical="5%" data-width="90%"
+                           data-show-transition="up" data-show-delay="400">
+                            تجهیزات جداگانه برای اطفال
+                        </p>
+                    </div>
+                </div>
+
+                <div class="sp-thumbnails">
+                    {% for img in gallery %}
+                    <img class="sp-thumbnail" src="{{img.gallery_img}}" />
+              
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+   
+    </section>
+
+
+</body>
+
+{% endblock content%}

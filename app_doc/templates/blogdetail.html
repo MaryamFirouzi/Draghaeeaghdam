@@ -1,0 +1,241 @@
+{% extends 'base.html' %}
+{% load static %}
+<title>{% block title %}{{blog.title}}{% endblock title %}</title>
+{% block content %}
+
+
+aaa
+
+<section class="bglight-118 custom-shadow" style="height: 120px">
+    <div class="container-fluid"></div>
+</section>
+<section class="container p-2 card card-shadow content">
+    <div class="row">
+        <div class="col-md-4 col-lg-3 order-md-0 order-1">
+            <!--
+            <nav class="card p-3 m-2">
+                <ul class="nav nav-pills flex-column">
+                    <li class="nav-item">
+                        <a href="Blog.html" class="nav-link active"><i class="fa fa-3x fa-medkit"></i>&nbsp;&nbsp;آخرین ارسالی ها</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link active"><i class="fa fa-3x fa-stethoscope"></i>&nbsp;&nbsp;پربازدیدترین ها</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link active"><i class="fa fa-3x fa-folder-open-o"></i>&nbsp;&nbsp;همه مطالب</a>
+                    </li>
+                </ul>
+            </nav>
+            
+            <div id="category_blog" class="card p-3 m-2">
+                <h6 class="widgettitle_head">دسته بندی ها</h6>
+                <ul>
+                    <li>
+                        <a href="#"><i class="fa fa-folder-o pl-2 text-info fa-2x"></i> تکنولوژی پزشکی</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-folder-o pl-2 text-info fa-2x"></i>اطفال</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-folder-o pl-2 text-info fa-2x"></i>ارتودنسی</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-folder-o pl-2 text-info fa-2x"></i>جراحی</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-folder-o pl-2 text-info fa-2x"></i>ترمیمی</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-folder-o pl-2 text-info fa-2x"></i>ایمپلنت</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-folder-o pl-2 text-info fa-2x"></i>زیبایی محیط</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-folder-o pl-2 text-info fa-2x"></i>طب سنتی</a>
+                    </li>
+                </ul>
+            </div>
+            <div id="comments_m" class="card m-2 d-flex flex-row flex-wrap">
+                <div class="card-body">
+                    <h6 class="widgettitle_head tex ir">آخرین دیدگاه ها</h6>
+                    <ul class="d-flex flex-column flex-wrap">
+                        <li>
+                            <a href="#">
+                                <img src="Images/Mag/Esfandiari.jpg" class="img-fluid rounded-circle">
+                            </a>
+                            <span class="IRANSans-Bold text-danger">مهدی میگه :</span><br>
+                            <a href="#">
+                                <p>امروزه ثابت شده یکی از گروه‌هایی که ناراحتی‌های لثه ب ..</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="Images/Mag/heart.jpg" class="img-fluid rounded-circle">
+                            </a>
+                            <span class="IRANSans-Bold text-danger">مبینا میگه :</span><br>
+                            <a href="#">
+                                <p>امروزه ثابت شده یکی از گروه‌هایی که ناراحتی‌های لثه ب ..</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="Images/Mag/avatar.jpg" class="img-fluid rounded-circle">
+                            </a>
+                            <span class="IRANSans-Bold text-danger">محمد حامین میگه :</span><br>
+                            <a href="#">
+                                <p>امروزه ثابت شده یکی از گروه‌هایی که ناراحتی‌های لثه ب ..</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="Images/Mag/Esfandiari.jpg" class="img-fluid rounded-circle">
+                            </a>
+                            <span class="IRANSans-Bold text-danger">علیرضا میگه :</span><br>
+                            <a href="#">
+                                <p>امروزه ثابت شده یکی از گروه‌هایی که ناراحتی‌های لثه ب ..</p>
+                            </a>
+                        </li>
+
+                    </ul>
+                    <!--<hr />
+                    <a href="#" class="btn btn-link  text-primary IRANSans-Bold">مشاهده دیدگاه های بیشتر</a>
+
+                </div>
+                 
+            </div>
+            --> 
+            <div id="soci" class="card p-3 m-2 d-flex flex-row flex-wrap justify-content-center">
+                <a class="social bg-instagram m-1" href="http://www.instagram.com" target="_blank">
+                    <img src="Images/instagram.png" class="img-fluid">
+                    ما را در اینستاگرام دنبال کنید
+                </a>
+               
+            </div>
+            
+        </div>
+
+        <div class="col-md-8 col-lg-9 order-md-1 order-0">
+            <div class="m-2">
+                <ul class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="Index.html"><i class="fa fa-home fa-2x"></i></a></li>
+                    <li class="breadcrumb-item"><a href="#">&nbsp;اخبار و دانستنی ها </a></li>
+                </ul>
+            </div>
+            <div id="blogdetail" class="container-fluid">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card p-2">
+                            <div class="card-body">
+
+                                <a href="#">
+                                    <h5 class="text-info IRANSans-Bold">{{thisblog.title}}</h5>
+                                </a>
+
+                                <img src="{{thisblog.image.url}}" class="img-fluid  py-3">
+                                <p>{{thisblog.description|safe}}</p>
+                                
+                                
+                            </div>
+                            <!--
+                            <div class="card-footer">
+                                <div class="d-flex justify-content-between p-sm-3">
+                                    <a href="#">
+                                        <span>
+                                            <img src="Images/Mag/heart.jpg" class="img-fluid rounded-circle">&nbsp;یوسف اسفندیاری
+                                        </span>
+                                    </a>
+                                    <span>اردیبهشت 25 | 23:45</span>
+                                </div>
+                               
+                                <hr>
+                                <div class="p-sm-2 ">
+                                    <h6 class="IRANSans-Bold">ما را در شبکه های اجتماعی به اشتراک بگذارید </h6>
+                                    <div class="d-flex flex-row" style="direction: ltr">
+                                        <a href="#">
+                                            <img src="Images/Svg/1_twitter.png">
+                                        </a>
+                                        <a href="#">
+                                            <img src="Images/Svg/1_instagram.png">
+                                        </a>
+                                        <a href="#">
+                                            <img src="Images/Svg/1_telegram.png">
+                                        </a> -->
+
+                                        <!--<a href="#" target="_blank"><i class="fa fa-2x fa-twitter bg-118  text-white p-2 m-1 rounded"></i></a>
+                                        <a href="#" target="_blank"><i class="fa fa-2x fa-linkedin bg-primary text-white p-2 m-1 rounded"></i></a>
+                                        <a href="#" target="_blank"><i class="fa fa-2x fa-instagram bg-instagram text-white p-2 m-1 rounded"></i></a>
+                                        <a href="#" target="_blank"><i class="fa fa-2x fa-facebook bg-facebook text-white py-2 px-3 m-1 rounded"></i></a>
+                                        <a href="#" target="_blank"><i class="fa fa-2x fa-paper-plane bg-telegram text-white p-2 m-1 rounded"></i></a>-->
+                                    </div>
+                                </div>
+                                <!--
+                                <hr>
+                                <div class="d-flex flex-column p-sm-2">
+                                    <h6 class="IRANSans-Bold pl-2 ml-3">برچسب ها :</h6>
+                                    <br>
+                                    <div class="tag">
+                                        <a href="#" target="_blank"><span class="badge badge-success">خواص عسل</span></a>&nbsp;
+                                        <a href="#" target="_blank"><span class="badge badge-success">دندانپزشکی</span></a>&nbsp;
+                                        <a href="#" target="_blank"><span class="badge badge-success">طب نوین</span></a>&nbsp;
+                                        <a href="#" target="_blank"><span class="badge badge-success">ارتودنسی</span></a>&nbsp;
+                                        <a href="#" target="_blank"><span class="badge badge-success">پزشکی نوین</span></a>&nbsp;
+                                        <a href="#" target="_blank"><span class="badge badge-success">تکنولوژی</span></a>&nbsp;
+                                        <a href="#" target="_blank"><span class="badge badge-success">درمان نوین</span></a>&nbsp;
+                                        <a href="#" target="_blank"><span class="badge badge-success">ایمپلنت</span></a>&nbsp;
+                                    </div>
+                                </div>-->
+                                <!-- 
+                                <hr>
+                                <div class="py-3 px-sm-5">
+                                    <h6 class="IRANSans-Bold pl-2 ml-3">ارسال دیدگاه :</h6>
+                                    <img src="Images/Mag/avatar.jpg" class="img-fluid mb-2 rounded-circle">
+                                    <div class="form-group">
+                                        <input class="form-control w-75" type="text" placeholder="نـام">
+                                        <input class="form-control w-75" type="email" placeholder="ایـمیل">
+                                        <textarea class="form-control area" cols="60" rows="9" placeholder="دیدگاه" style="height: 150px!important"></textarea>
+                                    </div>
+                                    <button type="submit" class="btn btn-warning mb-3">ارسـال &nbsp;<i class="fa fa-paper-plane"></i></button>
+                                </div>
+                                  
+                                <div id="comment_User" class="py-2 px-sm-5">
+                                    <ul>
+                                        <li>
+                                            <img src="Images/Mag/Esfandiari.jpg" alt="avatar" class="img-fluid rounded-circle">
+                                            <span class="px-2 text-danger IRANSans-Bold">هادي</span>
+                                            <time><i class="fa fa-clock-o"></i>&nbsp;ﺳﻪ شنبه, 06 تیر 1396 - 20:23</time>
+                                            <a href="#"><i class="fa fa-2x fa-reply pl-3 float-left"></i></a>
+                                            <p>هزینه های درمان تقریبا چقد تموم میشه؟</p>
+                                        </li>
+                                        <li>
+                                            <img src="Images/Mag/avatar.jpg" alt="avatar" class="img-fluid rounded-circle">
+                                            <span class="px-2 text-danger IRANSans-Bold">محمد امین</span>
+                                            <time><i class="fa fa-clock-o"></i>&nbsp;ﺳﻪ شنبه, 06 تیر 1396 - 20:23</time>
+                                            <a href="#"><i class="fa fa-2x fa-reply pl-3 float-left"></i></a>
+                                            <p>آیا ارتودنسی در طولانی مدت ضرری هم داره؟</p>
+                                        </li>
+
+                                        <li>
+                                            <img src="Images/Mag/heart.jpg" alt="avatar" class="img-fluid rounded-circle">
+                                            <span class="px-2 text-danger IRANSans-Bold">نیلوفر</span>
+                                            <time><i class="fa fa-clock-o"></i>&nbsp;ﺳﻪ شنبه, 06 تیر 1396 - 20:23</time>
+                                            <p>ارتودنسی نامرئی چیه؟</p>
+                                            <p class="mx-3 p-2 rounded bg-light">دستگاه شفاف و غیر قابل رویتی میباشد که طرفداران خیلی زیادی را جذب خود کرده است</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                                -->
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</section>
+
+
+{% endblock content%}

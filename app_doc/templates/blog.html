@@ -1,0 +1,231 @@
+{% extends 'base.html' %}
+{% load static %}
+<title>{% block title %}مقالات{% endblock title %}</title>
+{% block content %}
+<section class="modal fade" id="Login" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header bg-118 text-white">
+                <h6 class="modal-title">ورود به سایت</h6>
+                <button type="button" class="close  text-white" data-dismiss="modal">×</button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-9">
+                        <div class="form-group">
+                            <input class="form-control" type="text" placeholder="نـام کاربـری">
+                            <input class="form-control" type="password" placeholder="کلـمه عبـور">
+                        </div>
+                        <div class="form-check mb-2">
+                            <label class="form-check-label">
+                                <input class="form-check-input" type="checkbox" value="">مـرا به خاطر بسپار
+                            </label>
+                        </div>
+
+                        <button type="submit" class="btn btn-grad28">ورود</button>
+                        <br>
+                        <a href="lostpassword.html" class="btn btn-link">کلمه عبور خود را فراموش کرده ام</a><br>
+                        &nbsp;&nbsp;<span>هنوز حساب کاربری ندارید؟</span>&nbsp;<a href="Register.html" class="btn btn-link">ثبت نـام کنید</a>
+
+                    </div>
+                    <div class="col-md-3 hide-sm">
+                        <img src="Images/Svg/login.svg" class="img-fluid p-2">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section class="bglight-118 custom-shadow" style="height: 120px">
+    <div class="container-fluid"></div>
+</section>
+<section class="container p-2 card card-shadow content">
+    <div class="row">
+        <!--<div class="col-md-4 col-lg-3  order-md-0 order-1">
+            <nav class="card p-3 m-2">
+                <ul class="nav nav-pills flex-column">
+                    <li class="nav-item ">
+                        <a href="Blog.html" class="nav-link active"><i class="fa fa-3x fa-medkit"></i>&nbsp;&nbsp;آخرین ارسالی ها</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link active"><i class="fa fa-3x fa-stethoscope"></i>&nbsp;&nbsp;پربازدیدترین ها</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link active"><i class="fa fa-3x fa-folder-open-o"></i>&nbsp;&nbsp;همه مطالب</a>
+                    </li>
+                </ul>
+            </nav>
+            <div id="category_blog" class="card p-3 m-2">
+                <h6 class="widgettitle_head">دسته بندی ها</h6>
+                <ul>
+                    <li>
+                        <a href="#"><i class="fa fa-folder-o pl-2 text-info fa-2x"></i> تکنولوژی پزشکی</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-folder-o pl-2 text-info fa-2x"></i>اطفال</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-folder-o pl-2 text-info fa-2x"></i>ارتودنسی</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-folder-o pl-2 text-info fa-2x"></i>جراحی</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-folder-o pl-2 text-info fa-2x"></i>ترمیمی</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-folder-o pl-2 text-info fa-2x"></i>ایمپلنت</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-folder-o pl-2 text-info fa-2x"></i>زیبایی محیط</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-folder-o pl-2 text-info fa-2x"></i>طب سنتی</a>
+                    </li>
+                </ul>
+            </div>
+            <div id="comments_m" class="card m-2 d-flex flex-row flex-wrap">
+                <div class="card-body">
+                    <h6 class="widgettitle_head tex ir">آخرین دیدگاه ها</h6>
+                    <ul class="d-flex flex-column flex-wrap">
+                        <li>
+                            <a href="#">
+                                <img src="Images/Mag/Esfandiari.jpg" class="img-fluid rounded-circle">
+                            </a>
+                            <span class="IRANSans-Bold text-danger">مهدی میگه :</span><br>
+                            <a href="#">
+                                <p>امروزه ثابت شده یکی از گروه‌هایی که ناراحتی‌های لثه ب ..</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="Images/Mag/heart.jpg" class="img-fluid rounded-circle">
+                            </a>
+                            <span class="IRANSans-Bold text-danger">مبینا میگه :</span><br>
+                            <a href="#">
+                                <p>امروزه ثابت شده یکی از گروه‌هایی که ناراحتی‌های لثه ب ..</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="Images/Mag/avatar.jpg" class="img-fluid rounded-circle">
+                            </a>
+                            <span class="IRANSans-Bold text-danger">محمد حامین میگه :</span><br>
+                            <a href="#">
+                                <p>امروزه ثابت شده یکی از گروه‌هایی که ناراحتی‌های لثه ب ..</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="Images/Mag/Esfandiari.jpg" class="img-fluid rounded-circle">
+                            </a>
+                            <span class="IRANSans-Bold text-danger">علیرضا میگه :</span><br>
+                            <a href="#">
+                                <p>امروزه ثابت شده یکی از گروه‌هایی که ناراحتی‌های لثه ب ..</p>
+                            </a>
+                        </li>
+
+                    </ul>
+                    <!--<hr />
+                    <a href="#" class="btn btn-link  text-primary IRANSans-Bold">مشاهده دیدگاه های بیشتر</a>
+
+                </div>-->
+
+            </div>
+            <div id="soci" class="card p-3 m-2 d-flex flex-row flex-wrap justify-content-center">
+                <a class="social bg-instagram m-1" href="http://www.instagram.com" target="_blank">
+                    <img src="Images/instagram.png" class="img-fluid">
+                    ما را در اینستاگرام دنبال کنید
+                </a>
+               
+                
+               
+            </div>
+
+        </div>
+
+        
+    
+    
+
+        <div class="col-md-8 col-lg-9  order-md-1 order-0">
+            <div class="m-2">
+                <ul class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="Index.html"><i class="fa fa-home fa-2x"></i></a></li>
+                    <li class="breadcrumb-item"><a href="Blog.html">&nbsp;اخبار و دانستنی ها  </a></li>
+                </ul>
+            </div>
+            <div id="Blog" class="container">
+                <div class="row">
+                    {% for blog in page_obj %}
+                    {# Each "blog" is a blog model object. #}
+                    
+        
+       
+                    
+                    <div class="col-sm-6 col-md-6 col-lg-4">
+                        <div class="card">
+                            <div class="project-item">
+                                <a href="{{blog.get_absolute_url}}">
+                                    <img src="{{blog.image.url}}" class="card-img-top img-fluid" style=" width: 300px; height: 148px;"> 
+                                    <div class="card-img-overlay project-hover">
+                                        <div class="card-text inside d-flex justify-content-between text-white">
+                                            <span class="badge badge-warning badge-pill">زنان</span>
+                                            <span><i class="fa fa-eye"></i>&nbsp;367 بار</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="card-body text-center">
+                                <a href="{{blog.get_absolute_url}}">
+                                    <h6 class="text-info IRANSans-Bold">{{blog.title}}</h6>
+                                </a>
+                                <hr class="bg-118 w-50">
+                                <p>{{blog.description|safe|truncatewords:50}}</p>
+                            </div>
+                            <div class="card-footer d-flex justify-content-between ">
+                                
+                            </div>
+                        </div>
+                    </div>
+                   {% endfor %}
+                </div>
+
+
+                <div class="row">
+                    <div class="col-12 pt-3">
+                        <ul class="pagination justify-content-center">
+                        {% if page_obj.has_previous %}
+                        <li class="page-item active"><a href="?page=1" class="page-link">&laquo;اولین</a></li>
+                        <li class="page-item"class="page-item"><a href="?page={{ page_obj.previous_page_number }}" class="page-link">قبلی</a></li>   
+                            
+                        {% endif %}
+                
+                        <span class="current"class="page-item">
+                            <li class="page-item"><a href="#" class="page-link">صفحه {{ page_obj.number }} از {{ page_obj.paginator.num_pages }}</a></li>
+                            
+                            
+                        </span>
+                
+                        {% if page_obj.has_next %}
+                        <li class="page-item"><a href="?page={{ page_obj.next_page_number }}" class="page-link">بعدی</a></li>
+                        <li class="page-item"><a href="?page={{ page_obj.paginator.num_pages }}" class="page-link">آخرین &raquo;</a></li>    
+                            
+                        {% endif %}
+                        </span>
+                
+                       </ul>
+                    </div>
+                </div>
+
+        
+
+        </div>
+    </div>
+
+</section>
+
+
+{% endblock content%}

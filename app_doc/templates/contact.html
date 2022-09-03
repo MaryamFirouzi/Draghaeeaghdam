@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+{% load static %}
+<title>{% block title %}تماس با ما{% endblock title %}</title>
+{% block content %}
+
+<section class="bglight-118 custom-shadow" style="height: 100px">
+    <div class="container-fluid"></div>
+</section>
+
+<section id="contactpg" class="container p-2 card card-shadow content card card-shadow mt-2">
+
+    <div class="card-body m-2">
+        <h6 class="widgettitle_head">تماس با کلینیک :</h6>
+
+        <div class="row">
+            <div class="col-lg-6 p-sm-4">
+                <img src="{% static 'Images/svg/010-marker.svg' %}" class="svg_size mb-2">
+
+                <div class="mb-2">
+                    <span class="text-primary IRANSans-Bold">آدرس : </span>
+                    <span>{{clinic.address|safe}}</span><br>
+                </div>
+                <div class="mb-2">
+                    <span class="text-primary IRANSans-Bold"><i class="fa fa-phone fa-rotate-270"></i>&nbsp;تلفـن : </span>
+                    <span>{{clinic.office_phone1}}-{{clinic.office_phone2}}</span>
+                </div>
+                <div class="mb-2">
+                    <span class="text-primary IRANSans-Bold"><i class="fa fa-mobile fa-2x"></i>&nbsp;موبـایل : </span>
+                    <span>clinic.mobile_phone</span><br>
+                </div>
+                <!--
+                <div class="mb-2">
+                    <span class="text-primary IRANSans-Bold"><i class="fa fa-envelope"></i>&nbsp;ایمیل : </span>
+                    <a href="mailto:info@dr-118.ir">{{clinic.email}}</a>
+                </div>-->
+                                           <hr>
+                <div>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3238.618826290451!2d51.525783315260185!3d35.73559188018169!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x6e2aff38ad57f9bc!2zMzXCsDQ0JzA4LjEiTiA1McKwMzEnNDAuNyJF!5e0!3m2!1sde!2sus!4v1658212849387!5m2!1sde!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    
+                </div>
+
+            </div>
+            <!--
+            <div class="col-lg-6 p-sm-3">
+                <img src="Images/Svg/006-destination.svg" class="svg_size mb-2">
+
+                <p class="mb-3">جهت ارتباط با ما و ارسال نظـرات و پیشنهادات خود می توانید از فرم زیر استفاده نمایید</p>
+
+                <div class="form-group">
+                    <input class="form-control w-75" type="text" placeholder="نـام کامل">
+                    <input class="form-control w-75" type="email" placeholder="ایمیل معتـبر">
+                    <input class="form-control w-75" type="tel" placeholder="شمـاره موبایل">
+                    <input class="form-control w-75" type="text" placeholder="موضوع پیام">
+                    <textarea class="form-control area" cols="60" rows="9" placeholder="متن پیام" style="height: 150px!important"></textarea>
+                </div>
+
+                <button class="btn btn-grad28 cstm_radius mb-3" type="submit">ارسـال پیـام<i class="fa fa-paper-plane pr-2"></i></button>
+
+            </div>-->
+        </div>
+    </div>
+
+</section>
+
+{% endblock content%}

@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% load static %}
+<title>{% block title %}نوبت دهی{% endblock title %}</title>
+{% block content %}
+<br/>
+<br/>
+<p class="text-right" style="margin-right: 30px;margin-top: 20px;margin-bottom: 30px; font-size: 20px;">  &nbsp;بیـمار گرامی جهت دریافت نوبت ، لطفا با شماره های زیر تماس حاصل فرمایید&nbsp;    . </p>
+<aside class="col-lg-3 order-lg-0 order-1">
+
+    <div class="card">
+        <div class="card-body  bg-118 text-white rounded ">
+            <div class="row">
+
+                <div id="timework" class="col-lg-12 ">
+
+                    <h6 class="IRANSans-Bold">
+                        <img src="{% static 'Images/svg/calendar.png' %}">&nbsp;&nbsp;سـاعات کاری :
+                    </h6>
+                    <hr>
+                    <p>روزهای زوج : 4 بعداز ظهر - 8 شب</p>
+                    <p>سه شنبه  : 11 صبح - 2 بعداز ظهر</p>
+                    <!--<p>پنج شنبه ها : 10 صبح - 7 عصر</p>
+                    <p>جمعه ها : بستـه</p><hr>-->
+                    <div id="Dr_address">
+                        
+                        <div style="direction: ltr" class="pt-1 text-center d-none d-sm-block">
+                            <i class="fa fa-2x fa-phone-square"></i>&nbsp;<span>{{clinic.office_phone1}} - {{clinic.office_phone2}} </span>&nbsp;|&nbsp;
+                            <i class="fa fa-2x fa-mobile"></i>&nbsp;<span>{{clinic.mobile_phone}}</span>&nbsp;&nbsp;
+                            
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</aside>
+<div class="col-lg-9  order-lg-1 order-0">
+    <div id="demo" class="carousel slide mb-2" data-ride="carousel">
+
+
+    </div>
+
+</div>    
+{% endblock content%}

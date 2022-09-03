@@ -1,0 +1,324 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>{% block title %}{% endblock title %}</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="content-language" content="fa" />
+    <meta name="document-type" content="Public" />
+    <meta name="document-rating" content="General" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="Ofoghata" />
+
+    <link href="{% static 'Css/bootstrap.min.css' %}" rel="stylesheet" />
+    <link href="{% static 'Css/bootstrap-rtl.min.css' %}" rel="stylesheet" />
+    <link href="{% static 'Css/MainStyle.css' %}" rel="stylesheet" />
+    <link href="{% static 'Css/font-awesome.min.css' %}" rel="stylesheet" />
+    <link href="{% static 'Css/animate.css' %}" rel="stylesheet" />
+    <link href="{% static 'Css/owl-carousel/owl.carousel.min.css' %}" rel="stylesheet" />
+    <link href="{% static 'Css/owl-carousel/owl.theme.default.min.css' %}" rel="stylesheet" />
+    <link href="{% static 'Css/responsive.css' %}" rel="stylesheet" />
+    <script src="{% static 'Js/jquery.min.js' %}"></script>
+    <script src="{% static 'Js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'Js/owl.carousel.js' %}"></script>
+    <script src="{% static 'Js/custom.js' %}"></script>
+    <script src="{% static 'Js/persianumber.min.js' %}"></script>
+
+    <link href="{% static 'Css/sina-nav.min.css' %}" rel="stylesheet" />
+</head>
+<body>
+
+
+    <header class="header-03">
+        <div id="tophead" class="bg-118">
+            <div class="container-fluid d-flex p-1 flex-wrap container justify-content-between text-white ">
+                <div>
+                    <!--<a href="#" class="btn btn-link text-white" data-toggle="modal" data-target="#Register"><i class="fa fa-user-plus"></i>&nbsp;ثبت نام</a>-->
+                    <a href="{% url 'login' %}" class="btn btn-link text-white" ><i class="fa fa-sign-in"></i>&nbsp;ورود به حساب کاربری</a>
+                </div>
+                <div style="direction: ltr" class="pt-1 text-center d-none d-sm-block">
+                    <i class="fa fa-2x fa-phone-square"></i>&nbsp;<span>{{clinic.office_phone1}} - {{clinic.office_phone2}} </span>&nbsp;|&nbsp;
+                    <i class="fa fa-2x fa-mobile"></i>&nbsp;<span>{{clinic.mobile_phone}}</span>&nbsp;&nbsp;|
+                    <!--<a href="mailto:{{clinic.email}}" class="text-white p-2"><i class="fa fa-envelope"></i>&nbsp;{{clinic.email}} </a>-->
+                </div>
+
+            </div>
+        </div>
+       
+        <div class="nav-container">
+            <nav class="sina-nav mobile-sidebar navbar-fixed" data-top="60" style="background-color: mintcream;">
+                <div class="container">
+
+                    <div class="sina-nav-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <!--<a class="sina-brand" href="Index.html">
+                            <img src="{% static 'Images/logo.png' %}" class="img-fluid" />
+                        </a>-->
+                    </div>
+
+                    <div class="collapse navbar-collapse" id="navbar-menu">
+                        <ul class="sina-menu sina-menu-center">
+                            <li class="dropdown menu-item-has-mega-menu">
+                                <!--<a href="#" class="dropdown-toggle" data-toggle="dropdown">امکانات<i class="fa fa-chevron-down pr-2"></i></a>-->
+                                <div class="mega-menu dropdown-menu">
+                                    <ul class="mega-menu-row" role="menu">
+                                        <li class="mega-menu-col col-md-3">
+                                            <ul class="sub-menu">
+                                                <li><a href="{% url 'home' %}">صفحه اصلی</a></li>
+                                                <li><a href="{% url 'faq' %}">سوالات متداول</a></li>
+                                                <!--<li><a href="{% url 'gallery' %}">گـالری تصاویر</a></li>-->
+                                                <li><a href="{% url 'blog' %}">مقالات</a></li>
+                                                
+                                                <li><a href="{% url 'nobat' %}">نوبت دهی آنلاین</a></li>
+                                                <li><a href="schedule.html">برنامه زمانی</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="mega-menu-col col-md-3">
+                                            <ul class="sub-menu">
+                                                <li><a href="Submit_question.html">دریافت مشاوره</a></li>
+                                                <li><a href="Guide.html">راهنمای استفاده</a></li>
+                                                <li><a href="PriceOfservice.html">تعرفه خدمات</a></li>
+                                                <li><a href="{% url 'about' %}">دربـاره ما</a></li>
+                                                <li><a href="{% url 'contact' %}">تماس با کلینیک</a></li>
+                                                <li><a href="Privacy.html">حـریم خصوصی</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="mega-menu-col col-md-3">
+                                            <ul class="sub-menu">
+                                                <li><a href="Register.html">عضویت در سایت</a></li>
+                                                <li><a href="Login.html">ورود به سایت</a></li>
+                                                <li><a href="lostpassword.html">فراموشی کلمه عبور</a></li>
+                                                <li><a href="App.html">اپلیکیشن من</a></li>
+                                                <li><a href="Waiting.html">لطفا منتظر بمانید</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="mega-menu-col col-md-3">
+                                            <ul class="sub-menu">
+                                                <li><a href="NotFound.html">پـیغام جستجو</a></li>
+                                                <li><a href="Success.html">ثبت موفق</a></li>
+                                                <li><a href="UnSuccess.html">ثبت ناموفق</a></li>
+                                                <li><a href="404.html">‌صفحه ۴۰۴</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li><a href="{% url 'home' %}">صفحه اصلی</a></li>
+                            <li><a href="{% url 'nobat' %}">نوبت دهی آنلاین</a></li>
+                            <!--<li><a href="{% url 'gallery' %}">گالری تصاویر</a></li>-->
+                            <li><a href="{% url 'blog' %}">مقـالات</a></li>
+                            <li><a href="{% url 'faq' %}">سوالات متداول</a></li>
+                            <li><a href="{% url 'about' %}">درباره ما</a></li>
+                            <li><a href="{% url 'contact' %}">ارتباط با مطب</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Modal Register -->
+    <section class="modal fade" id="Register" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header bg-118 text-white">
+                    <h6 class="modal-title">عضـویت در سایت</h6>
+                    <button type="button" class="close text-white" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+
+                    <div class="row mb-2">
+                        <div class="col-md-9">
+                            <h6 class="text-success">مـزایای ثبت نام:</h6>
+
+                            <span><i class="fa fa-check text-info"></i>&nbsp;امکان رزرو نوبت</span><br />
+                            <span><i class="fa fa-check text-info"></i>&nbsp;امکان ارسـال سوال و مشاهده پاسخ از سوی پزشک</span><br />
+                        </div>
+                        <div class="col-md-3 p-3 hide-sm">
+                            <img src="{% static 'Images/Svg/dentist.svg' %}" class="img-fluid" />
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <input class="form-control" type="text" placeholder="نـام کاربری" />
+                                <input class="form-control" type="email" placeholder="ایـمیل معتبر" />
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <input class="form-control" type="password" placeholder="رمـز عبـور" />
+                                <input class="form-control" type="password" placeholder="تکرار رمـز عبـور " />
+                            </div>
+                        </div>
+
+                    </div>
+                    <button type="submit" class="btn btn-grad28">ثبت نــام</button>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal Login 
+    <section class="modal fade" id="Login" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header bg-118 text-white">
+                    <h6 class="modal-title">ورود به سایت</h6>
+                    <button type="button" class="close  text-white" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-9">
+                            <div class="form-group">
+                                <input class="form-control" type="text" placeholder="نـام کاربـری" />
+                                <input class="form-control" type="password" placeholder="کلـمه عبـور" />
+                            </div>
+                            <div class="form-check mb-2">
+                                <label class="form-check-label">
+                                    <input class="form-check-input" type="checkbox" value="" />مـرا به خاطر بسپار
+                                </label>
+                            </div>
+
+                            <button type="submit" class="btn btn-grad28">ورود<i class="fa fa-sign-in pr-2"></i></button>
+                            <br />
+                            <a href="lostpassword.html" class="btn btn-link">کلمه عبور خود را فراموش کرده ام</a><br />
+                            &nbsp;&nbsp;<span>هنوز حساب کاربری ندارید؟</span>&nbsp;<a href="Register.html" class="btn btn-link">ثبت نـام کنید</a>
+
+                        </div>
+                        <div class="col-md-3 p-2 hide-sm">
+                            <img src="{% static 'Images/Svg/login.svg' %}" class="img-fluid p-2" />
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>-->
+
+
+
+    {% block content %}{% endblock content %}
+
+
+    <footer id="Footer">
+        <div class="container-fluid mt-3 ">
+
+            <div class="row px-md-5 p-3">
+                <div id="fcont" class="col-lg-3 col-sm-6 my-4 order-3 order-sm-0"style="margin-left: 400px;">
+                    <h3 class="widgettitle IRANSans-Bold">ارتباط با مطب</h3>
+                    <p class="IRANSans-Bold"><i class="fa fa-location-arrow fa-2x"></i>&nbsp; آدرس</p>
+                    <span>{{clinic.address|safe}}</span><br />
+                    <p class="IRANSans-Bold"><i class="fa fa-phone fa-rotate-270  fa-2x"></i>&nbsp; تلفن</p>
+                    <span>{{clinic.office_phone1}} - {{clinic.office_phone2}}</span><br />
+                    <p class="IRANSans-Bold"><i class="fa fa-mobile fa-3x "></i>&nbsp; موبایل</p>
+                    <span>{{clinic.mobile_phone}}</span><br />
+                    <br />
+
+                    <div>
+                        <h3 class="widgettitle IRANSans-Bold">ما را دنبال کنید</h3>
+                        <a href="http://www.instagram.com" target="_blank"><img src="{% static 'Images/Svg/1_instagram.png' %}" class="m-1"></a>
+                        <!--<a href="http://www.telegram.com" target="_blank"><img src="{% static 'Images/Svg/1_telegram.png' %}" class="m-1"></a>
+                        <a href="http://www.aparat.com" target="_blank"><img src="{% static 'Images/Svg/1_aparat.png' %}" class="m-1"></a>
+                        <a href="http://www.youtube.com" target="_blank"><img src="{% static 'Images/Svg/1_youtube.png' %}" class="m-1"></a>
+                        <a href="http://www.twitter.com" target="_blank"><img src="{% static 'Images/Svg/1_twitter.png' %}" class="m-1"></a>-->
+                    </div>
+                </div>
+
+                <div id="faq" class="col-lg-3 col-sm-6 my-4  order-1 order-sm-1" >
+                    <h3 class="widgettitle IRANSans-Bold" >دسترسی سریع</h3>
+                    <ul class="d-flex flex-column flex-wrap">
+                        <!--<li>
+                            <a href="Submit_question.html"><i class="fa fa-angle-double-left"></i>&nbsp;ارسال سوال و مشاوره</a>
+                        </li>-->
+                        <li>
+                            <a href="{% url 'nobat' %}"><i class="fa fa-angle-double-left"></i>&nbsp;دریافت نوبت آنلاین</a>
+                        </li>
+
+                        <!--<li>
+                            <a href="{% url 'gallery' %}"><i class="fa fa-angle-double-left"></i>&nbsp;گالری تصاویر</a>
+                        </li>-->
+                        <li>
+                            <a href="{% url 'faq' %}"><i class="fa fa-angle-double-left"></i>&nbsp;سوالات متداول</a>
+                        </li>
+                        <li>
+                            <a href="{% url 'blog' %}"><i class="fa fa-angle-double-left"></i>&nbsp;مقـالات</a>
+                        </li>
+                    </ul>
+                </div>
+
+              <!--  <div id="faq" class="col-lg-3 col-sm-6 my-4  order-2 order-sm-2">
+                    <h3 class="widgettitle IRANSans-Bold">لینک های مفید</h3>
+                    <ul class="d-flex flex-column flex-wrap">
+                        <li>
+                            <a href="#" target="_blank"><i class="fa fa-angle-double-left"></i>&nbsp;کلینیک دندانپزشکی نور</a>
+                        </li>
+                        <li>
+                            <a href="#" target="_blank"><i class="fa fa-angle-double-left"></i>&nbsp;مرکز تخصصی زیبایی ترمیمی</a>
+                        </li>
+                        <li>
+                            <a href="#" target="_blank"><i class="fa fa-angle-double-left"></i>&nbsp;دندانپزشکی زیبایی دکتر مفیدی</a>
+                        </li>
+                        <li>
+                            <a href="#" target="_blank"><i class="fa fa-angle-double-left"></i>&nbsp;کلینیک دندانپزشکی نور</a>
+                        </li>
+                        <li>
+                            <a href="#" target="_blank"><i class="fa fa-angle-double-left"></i>&nbsp;دندانپزشکی زیبایی دکتر مفیدی</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-sm-6 my-4  order-0 order-sm-3">
+                    <h3 class="widgettitle IRANSans-Bold">معرفی پزشک</h3>
+                    <img src="Images/logo_{% static 'footer.png' %}" class="mb-3" />
+                    <p class="text-justify">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطر آن چنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. </p>
+                </div>
+
+            </div>-->
+
+
+        </div>
+    </footer>
+
+    <section class="dark_blue">
+        <div class="container-fluid  d-flex flex-column copyright  p-2">
+            <p>
+                کلیه حقوق این سایت  محفوظ می باشد - طراحی توسط 
+                <a href="https://www.linkedin.com/in/maryam-firouzi/" class="text-white" target="_blank">مهندس مریم فیروزی</a>
+               <!-- <a href="https://www.linkedin.com/in/maryam-firouzi/" class="btn btn-success px-3 mr-2"> مریم فیروزی</a>-->
+            </p>
+        </div>
+    </section>
+
+    <script src="{% static 'Js/sina-nav.min.js' %}"></script>
+
+
+
+
+
+    <script>
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+        }
+    </script>
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

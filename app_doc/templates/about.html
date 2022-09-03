@@ -1,0 +1,95 @@
+{% extends 'base.html' %}
+{% load static %}
+<title>{% block title %}دربـاره ی ما{% endblock title %}</title>
+{% block content %}
+
+<section class="modal fade" id="Login" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header bg-118 text-white">
+                <h6 class="modal-title">ورود به سایت</h6>
+                <button type="button" class="close  text-white" data-dismiss="modal">×</button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-9">
+                        <div class="form-group">
+                            <input class="form-control" type="text" placeholder="نـام کاربـری">
+                            <input class="form-control" type="password" placeholder="کلـمه عبـور">
+                        </div>
+                        <div class="form-check mb-2">
+                            <label class="form-check-label">
+                                <input class="form-check-input" type="checkbox" value="">مـرا به خاطر بسپار
+                            </label>
+                        </div>
+
+                        <button type="submit" class="btn btn-grad28">ورود</button>
+                        <br>
+                        <a href="lostpassword.html" class="btn btn-link">کلمه عبور خود را فراموش کرده ام</a><br>
+                        &nbsp;&nbsp;<span>هنوز حساب کاربری ندارید؟</span>&nbsp;<a href="Register.html" class="btn btn-link">ثبت نـام کنید</a>
+
+                    </div>
+                    <div class="col-md-3 p-2 hide-sm">
+                        <img src="Images/Svg/login.svg" class="img-fluid p-2">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<section class="bglight-118 custom-shadow" style="height: 100px">
+    <div class="container-fluid"></div>
+</section>
+
+<section id="aboutus" class="container p-2 card card-shadow content card card-shadow mt-2">
+
+    <div class="card-body m-2">
+        <!--<h5>تیم پزشکی ما :</h5><hr />-->
+        <h6 class="widgettitle_head">معرفی دکتر آرزو آقائی اقدم :</h6>
+      
+
+            <div class="row">
+                <div class="col-md-6 order-md-0 order-1">
+                    <p>
+
+                        {{clinic.description|safe}}
+
+                        <br>
+
+                    </p>
+                </div>
+                <div class="col-md-6  order-md-1 order-0">
+                    <img src="{{clinic.top_image.url}}" class="rounded  img-fluid my-3" alt="top_image" style="margin-right: 100px;">
+
+                </div>
+            </div>
+
+            <!--<div class="row mt-4">
+                <h5>دیپلم و گواهینامه ها :</h5><hr>
+                <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.</p>
+
+                <div class="col-md-3">
+
+                    <img src="Images/2-3-1.jpg" class="img-fluid p-2">
+                </div>
+                <div class="col-md-3">
+
+                    <img src="Images/3-3.jpg" class="img-fluid p-2">
+                </div>
+                <div class="col-md-3">
+
+                    <img src="Images/4-3-1.jpg" class="img-fluid p-2">
+                </div>
+
+            </div>-->
+
+
+    </div>
+
+</section>
+
+
+
+
+{% endblock content%}
